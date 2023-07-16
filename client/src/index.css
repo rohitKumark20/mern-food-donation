@@ -1,0 +1,1108 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.first-section {
+    margin-top: 40px;
+    border: 1px solid;
+}
+
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: #131A22;
+    color: white;
+}
+
+body {
+    background-color: #f5f5f5;
+    max-height: 100vh;
+}
+
+/* Form error Message */
+.form-error-message {
+    color: red;
+    font-size: 13px;
+}
+
+input:invalid[focused="true"]~.form-error-message {
+    display: block;
+}
+
+/* CSS for the toast */
+.wrapper {
+    width: 380px;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    z-index: 1;
+    /* border: 1px solid black; */
+}
+
+@media screen and (max-width:400px) {
+
+    .wrapper {
+        width: 100%;
+        margin: auto 2rem;
+    }
+
+    .toast-notification p {
+        font-size: 12px;
+
+    }
+}
+
+.toast {
+    width: 100%;
+    height: 70px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1.4fr 6fr 0.5fr;
+    justify-content: center;
+}
+
+.success {
+    border-left: 7px solid #47f764;
+}
+
+.toast-icon,
+.toast-notification {
+    align-self: center;
+}
+
+.toast-notification span {
+    font-size: 16px;
+    color: #101020;
+    font-weight: 600;
+}
+
+.toast-notification p {
+    font-size: 14px;
+
+}
+
+.toast button {
+    align-self: flex-start;
+    border: none;
+    font-size: 25px;
+    line-height: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* CSS for the Login Page */
+
+.navbar {
+    max-width: 370px;
+    /* border: 1px solid blue; */
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    /* border: 1px solid black; */
+    padding: 1rem;
+    max-width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0.4rem 0.7rem 2.8rem 0 rgba(68,77,91,0.14); */
+}
+
+.container>* {
+    margin: 0.7rem auto 0 auto;
+}
+
+.input_box {
+    border: 1px solid black;
+    padding: 0.3rem 0.3rem;
+}
+
+.input_box .login-ui-error {
+    padding: 0 0.7rem;
+}
+
+.input_box .input_box-content {
+    display: flex;
+    padding: 0.3rem 0.7rem;
+}
+
+.input_box:last-child {
+    border-top: none;
+}
+
+.input_box input {
+    width: 100%;
+    border: none;
+    margin-left: 10px;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.passwordManager,
+.remember {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.remember span {
+    margin-left: 10px;
+}
+
+.btn {
+    width: 100%;
+    padding: 4px 24px;
+    font-size: 14px;
+}
+
+.signUp {
+    width: 70%;
+    text-align: center;
+    margin: 0.3rem auto;
+}
+
+.orOption {
+    text-align: center;
+    position: relative;
+}
+
+.orOption::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 45%;
+    height: 1px;
+    background-color: black;
+    top: 50%;
+}
+
+.orOption::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 45%;
+    height: 1px;
+    background-color: black;
+    top: 50%;
+}
+
+/* CSS from Register field */
+.input-field input {
+    width: 100%;
+    outline: none;
+    padding: 0.4rem;
+}
+
+.input-tabs>* {
+    margin-bottom: 0.5rem;
+}
+
+.termsOfUse {
+    font-size: 14px;
+    text-align: center;
+}
+
+.radio-btns {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+
+    /* border: 1px solid; */
+    /* padding: 5px; */
+}
+
+.radio-btns .radio-options {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.radio-btns label {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+/* CSS for NavigationBar */
+
+.nav {
+    width: 100%;
+    padding: 0.3rem 2rem;
+    box-shadow: 0 2px 25px 0 rgba(54, 66, 117, 0.12);
+    z-index: 1;
+    /* border: 1px solid black; */
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    height: 40px;
+}
+
+.nav-icons {
+    display: none;
+}
+
+.nav-container {
+    position: relative;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-container a {
+    text-decoration: none;
+}
+
+.nav-lists {
+    display: flex;
+    align-items: center;
+    column-gap: 1.5rem;
+    list-style-type: none;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.nav-btn {
+    padding: 0.3rem 0.9rem;
+    cursor: pointer;
+}
+
+.mobile-navigation {
+    display: none;
+}
+
+@media screen and (max-width:769px) {
+
+    .nav-lists,
+    .btns {
+        display: none;
+    }
+
+    .nav-icons {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 0px;
+    }
+
+    .mobile-navigation {
+        display: inline-block;
+        height: calc(100% - 40px);
+        width: 230px;
+        background-color: #0D0D0D;
+        position: fixed;
+        top: 40px;
+        z-index: 1;
+        right: -230px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-active {
+        right: 0;
+    }
+
+    .mobile-nav-container {
+        width: 80%;
+        height: 100%;
+        /* border: 1px solid white; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .mobile-nav-btns {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .mobile-nav-list {
+        list-style-type: none;
+    }
+
+    .mobile-nav-list li {
+        width: 100%;
+        height: 30px;
+        background-color: #0D0D0D;
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    .mobile-nav-list li a {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+
+/* Forgot Password CSS */
+.recovery {
+    border: 1px solid black;
+    max-width: 370px;
+    margin: 60px auto 0 auto;
+}
+
+.main-container {
+    border: 1px solid blue;
+    padding: 1rem;
+}
+
+.main-container input {
+    width: 100%;
+    padding: 0.3rem 0.7rem;
+    outline: none;
+}
+
+.main-container>*:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.backLink {
+    margin-left: 1.5rem;
+}
+
+/* CSS for Home */
+.home-form {
+    margin-top: 40px;
+    border: 1px solid transparent;
+    background-color: #ffffff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.form-container {
+    flex-basis: 40%;
+    margin: 2rem 0;
+    max-width: 370px;
+    border: 1px solid blue;
+    position: relative;
+}
+
+.donation-qoute{
+    padding-left: 20px;
+    margin: auto;
+    flex-basis: 60%;
+}
+
+.qoute-container p{
+    color: #577357;
+}
+
+.qoute-container h1{
+    font-size: 60px;
+    color: rgb(218, 13, 51);
+}
+
+.form-container input,
+textarea {
+    width: 100%;
+    padding: 0.3rem 0.8rem;
+    outline: none;
+}
+
+.form-header {
+    display: flex;
+}
+
+.form-header .label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    /* background-color: #ffffff; */
+    height: 35px;
+    width: 50%;
+    padding: 1rem auto;
+}
+
+.form-body {
+    padding: 1rem;
+}
+
+.donate-input textarea::placeholder,
+.donate-input textarea {
+    /* font-size: 14px; */
+    /* padding: 10px; */
+    /* font-size: 1.1em; */
+    outline: none;
+    resize: none;
+    max-height: 100px;
+}
+
+.donate-form>*:not(:first-child),
+.recieve-form>*:not(:first-child) {
+    margin-top: 0.7rem;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~.recieve-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#check:checked~.donate-form {
+    display: none;
+}
+
+#check:checked~.layer {
+    left: 50%;
+}
+
+.layer {
+    content: '';
+    height: 50px;
+    width: 50%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media screen and (max-width:769px) {
+    .home-form {
+        padding: 0;
+        display: block;
+    }
+
+    .donation-qoute{
+        display: none;
+    }
+
+    .form-container {
+        margin: 2rem auto;
+        max-width: 95%;
+    }
+}
+
+/* CSS For donate-content in Home */
+.list-heading {
+    width: 50%;
+    margin: 0 auto -3.5rem auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+.main-container-donation,
+.main-container-reciever {
+    /* border: 1px solid black; */
+    margin: 1rem;
+}
+
+
+
+.recieve-content,
+.form {
+    background-color: #ffffff;
+}
+
+.content-container {
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 10px;
+}
+
+.donate-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* CSS for .recieve-form in HOME */
+.recieve-form {
+    display: none;
+}
+
+.ui {
+    text-transform: uppercase;
+    background-color: #ff506c;
+    color: #ffffff;
+    border: 0.1rem solid #ff506c;
+    padding: 0.6rem 2rem;
+    margin: 2rem auto;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.showMore {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* CSS for the Donor page */
+.empty-list {
+    width: 100%;
+    margin-top: 40px;
+    height: calc(100vh - 40px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #ffffff;
+    font-size: 40px;
+}
+
+.donor-header-top h1 {
+    padding-left: 20px;
+}
+
+.top-donors {
+    position: relative;
+    width: 98%;
+    margin: 10px auto 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 25px 0 rgba(54, 66, 117, 0.12);
+
+
+}
+
+.top-donors-card-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.top-donors-card-list::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.top-donors-card-list::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.link-to-donor {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.top-donors-card-list {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    padding: 0 20px 30px 20px;
+}
+
+.donation-content-lists {
+    margin-top: 40px;
+    border: 1px solid transparent;
+}
+
+.donation-content-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin: 2rem;
+}
+
+.donor-header-content {
+    padding-left: 30px;
+    margin-bottom: -16px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width:769px) {
+    .empty-list {
+        font-size: 20px;
+    }
+
+    .list-heading {
+        font-size: 25px;
+    }
+
+    .donation-content-container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+/* CSS for the cards */
+.card-container {
+    border: 1px solid black;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.card-container img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.card-container>*:not(:first-child, :last-child) {
+    margin-top: 0.5rem;
+}
+
+.card-btn {
+    padding: 0.3rem 0.8rem;
+    width: 50%;
+    margin: 1rem 0;
+}
+
+/* CSS contact css  */
+.contact-section {
+    margin-top: 40px;
+}
+
+.contact-main-container {
+    /* border: 1px solid; */
+    position: relative;
+    width: 100%;
+    padding: 30px 50px;
+}
+
+.contact-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-heading h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.form {
+    grid-area: form;
+}
+
+.info {
+    grid-area: info;
+}
+
+.map {
+    grid-area: map;
+}
+
+.contact {
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+}
+
+.contact-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 5fr;
+    grid-template-areas: "form info" "form map";
+    grid-gap: 20px;
+}
+
+/* Contact form */
+.formbox {
+    position: relative;
+    width: 100%;
+}
+
+.row50 {
+    display: flex;
+    gap: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.row100 .input-box {
+    width: 100%;
+}
+
+.input-box span {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.input-box input {
+    padding: 5px;
+    font-size: 1em;
+    outline: none;
+}
+
+.input-box textarea {
+    padding: 10px;
+    font-size: 1em;
+    outline: none;
+    resize: none;
+    min-height: 120px;
+    margin-bottom: 10px;
+}
+
+.input-box input[type="submit"] {
+    width: 20%;
+    background-color: #ff506c;
+    color: #ffffff;
+    border: 1px solid #ff506c;
+}
+
+.map {
+    padding: 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:1000px) {
+    .contact-main-container {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .contact-container {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "form" "info" "map";
+        grid-gap: 20px;
+    }
+
+    .map {
+        min-height: 200px;
+    }
+
+    .row50 {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:459px) {
+    .contact-heading h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width:689px) {
+    .input-box input[type="submit"] {
+        width: 100%;
+    }
+}
+
+.info .info_box {
+    margin-top: 10px;
+}
+
+.info .info_box div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info_box div span {
+    min-width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff506c;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.info_box div a {
+    text-decoration: none;
+    color: #131A22;
+}
+
+/* CSS for the Modal */
+.modal {
+    background-color: #949494a0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 1;
+}
+
+.container-modal {
+    position: relative;
+    flex-basis: 500px;
+    min-height: 60%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: space-between; */
+    box-sizing: border-box;
+    padding: 0.6rem;
+}
+
+.modal-heading {
+    margin-top: 2rem;
+}
+
+.container-modal input[type='text'] {
+    width: 100%;
+}
+
+.container-modal .donate-modal-btn {
+    padding: 0.4rem 0.8rem;
+    min-width: 200px;
+    display: block;
+    margin: auto;
+}
+
+.modal-main-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.left-modal-content {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #131A22;
+    padding: 10px;
+}
+
+.left-modal-content img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.date-time-content {
+    font-size: 14px;
+}
+
+@media screen and (max-width:500px) {
+    .left-modal-content img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    .modal-heading {
+        font-size: 14px;
+    }
+
+    .left-modal-content,
+    .right-modal-content,
+    .date-time-content {
+        font-size: 12px;
+    }
+}
+
+.right-modal-content {
+    flex-basis: 60%;
+    padding: 10px 30px;
+}
+
+.right-modal-content div {
+    margin-bottom: 0.5rem;
+}
+
+.close-modal {
+    /* border: 1px solid black; */
+    min-width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b5989853;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+/* Comment section */
+.comment-container input {
+    width: 100%;
+    padding: 0.3rem 40px 0.3rem 0.4rem;
+    outline: none;
+}
+
+.comment-container {
+    position: relative;
+    width: 90%;
+    bottom: 0;
+    margin: auto auto 1rem auto;
+    background-color: #f5f5f5;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+.comment-container .comment-icon {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+/* CSS for DOnor List Page */
+.donor-list-section {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.donor-list-container {
+    display: grid;
+    /* justify-content: space-evenly; */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width:959px) {
+    .donor-list-container {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+.donor-list-header-part {
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    font-size: 20px;
+}
+
+/* CSS for about us page */
+.title {
+    text-align: center;
+    margin: 45px 0;
+}
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 20px;
+    margin-bottom: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.box {
+    padding: 1rem;
+    background: linear-gradient(to bottom right, #eef2f3, #dfe6e9);
+    border: 1px solid #d7d;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box h2 {
+    margin-top: 0;
+}
+
+.team {
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+
+}
+
+.teamContainer {
+    display: flex;
+    justify-content: center;
+
+}
+
+.teamMember {
+    text-align: center;
+    width: 200px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #f5f5f5;
+    background-image: url("./images/avatar.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.contacts-link-about {
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto;
+
+}
+
+.contactButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.contactButton {
+    padding: 10px 20px;
+    background-color: #f0ecec;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Source Sans Pro';
+    border: 1px;
+    cursor: pointer;
+    margin: 0 0 2rem 0;
+    width: 150px;
+    box-shadow: 0.3rem 0.3rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width:459px) {
+    .teamContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+}

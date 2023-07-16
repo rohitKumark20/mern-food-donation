@@ -1,0 +1,98 @@
+.donor-state-main-container{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: "info head" "info con";
+    margin-top: 40px;
+    gap: 20px;
+    height: calc(100vh - 40px);
+    padding: 10px;
+}
+
+.mobile-btn-to-donor{
+    display: none;
+    padding: 4px;
+}
+
+.web-btn-to-donor{
+    padding: 4px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.donor-state-information{
+    /* border: 1px solid; */
+    padding: 10px;
+    height: 100%;
+    position: sticky;
+    grid-area: info;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.right-part-container{
+    /* border: 1px solid; */
+    grid-area: head;
+    padding: 10px;
+    box-shadow: 3px 0 5px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.donor-state-container{
+    grid-area: con;
+    max-width: 100%;
+    max-height: calc(100vh - 40px);
+    /* border: 1px solid; */
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 15px;
+    scrollbar-width: thin;
+    background-color: transparent;
+    padding: 40px;
+}
+
+
+
+.donor-state-container::-webkit-scrollbar{
+    width: 4px;
+}
+
+.donor-state-container::-webkit-scrollbar-thumb{
+    background-color: transparent;
+}
+
+.donor-state-container::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+@media screen and (max-width:756px) {
+    .donor-state-main-container{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .donor-state-information{
+        height: 30%;
+    }
+
+    .right-part-container{
+        box-shadow: none;
+    }
+
+    .mobile-btn-to-donor{
+        display: inline-block;
+    }
+
+    .web-btn-to-donor{
+        display: none;
+    }
+}
+
+
+
